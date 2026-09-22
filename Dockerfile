@@ -1,5 +1,3 @@
-FROM eclipse-temurin:26
-LABEL authors="User"
-COPY ./target/classes/com /tmp/com
+COPY ./target/devops-0.1.0.2-jar-with-dependencies.jar /tmp
 WORKDIR /tmp
-ENTRYPOINT ["java", "com.napier.sem.App"]
+ENTRYPOINT ["java", "-jar", "devops-0.1.0.2-jar-with-dependencies.jar"]
